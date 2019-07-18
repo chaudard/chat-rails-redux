@@ -13,8 +13,8 @@ general = Channel.create!(name: "general")
 react = Channel.create!(name: "react")
 paris = Channel.create!(name: "paris")
 
-seb = User.create!(email: "seb@gmail.com", password: "123456")
-dan = User.create!(email: "dan@gmail.com", password: "123456")
+seb = User.create!(email: "seb@gmail.com", password: "123456", nickname: "seb")
+dan = User.create!(email: "dan@gmail.com", password: "123456", nickname: "dan")
 
 mes1 = Message.create!(content: "Hello general channel", channel: general, user: dan)
 mes2 = Message.create!(content: "Hello dan on general channel", channel: general, user: seb)
