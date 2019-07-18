@@ -7,7 +7,10 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def create
-
+    message = @channel.messages.build(content: params[:content])
+    message.user = current_user
+    message.save
+    render json: message # see Message.as_json method
   end
 
   private
